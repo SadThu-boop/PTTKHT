@@ -135,10 +135,8 @@
                         <button style="background-color: #FFC107; color: white;">Sửa</button>
                     </a>
                     
-                    <!-- Nút xóa -->
-                    <a href="deleteDish?id=<%=i.getId() %>" onclick="return confirm('Bạn có chắc chắn muốn xóa món này?');">
-                        <button style="background-color: #F44336; color: white;">Xóa</button>
-                    </a>
+                   
+                    
                 </td>
             </tr>
             <% 

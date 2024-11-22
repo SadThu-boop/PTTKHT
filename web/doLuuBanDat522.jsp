@@ -42,6 +42,13 @@
                 box.style.display = 'none';
             }, 3000); // Ẩn sau 3 giây
         }
+
+        // Chuyển hướng sau 5 giây
+        function redirectAfterDelay(url, delay) {
+            setTimeout(() => {
+                window.location.href = url;
+            }, delay);
+        }
     </script>
 </head>
 <body>
@@ -49,18 +56,15 @@
     <% if ("true".equals(success)) { %>
         <script>
             showNotification('Thêm bàn đặt thành công!', false);
+            redirectAfterDelay('gdChinhKH522.jsp', 5000); // Chuyển hướng sau 5 giây
         </script>
     <% } else if ("false".equals(success)) { %>
         <script>
             showNotification('Thêm bàn đặt thất bại!', true);
+            redirectAfterDelay('gdChinhKH522.jsp', 5000); // Chuyển hướng sau 5 giây
         </script>
     <% } %>
     
-    <!-- Nội dung hiện tại của trang -->
-    <div style="text-align: center; margin-top: 20px;">
-        <a href="gdChinhKH522.jsp">
-            <button style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 4px;">Quay lại</button>
-        </a>
-    </div>
+   
 </body>
 </html>
